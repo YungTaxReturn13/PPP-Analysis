@@ -8,26 +8,29 @@ import dash_core_components as dcc
 import dash_html_components as html
 import plotly.express as px
 import dash_table
+import base64
 
 
+image = r'C:\Users\justi\Python Projects\PPP\PPP-Analysis\crying-cat-meme-lede.jpg'
+encode_image = base64.b64encode(open(image, 'rb').read()).decode('ascii')
 
 pd.set_option('display.float_format', lambda x: '%.3f' % x)
 
-arr = os.listdir(r"C:\Users\justi\Python Projects\PPP\PPP-Analysis\PPP Data\All Data 1201")
-dff = pd.DataFrame()
-for i in arr:
-    zf = zipfile.ZipFile(f'C://Users//justi//Python Projects//PPP//PPP-Analysis//PPP Data//All Data 1201//{i}')
-    file_list = zf.namelist()
-    file_list = [k for k in file_list if '.csv' in k]
-    file_list = [k for k in file_list if '_MACOSX' not in k]
-    for j in file_list:
-        df = pd.read_csv(zf.open(f'{j}'))
-        dff = dff.append(df)
+# arr = os.listdir(r"C:\Users\justi\Python Projects\PPP\PPP-Analysis\PPP Data\All Data 1201")
+# dff = pd.DataFrame()
+# for i in arr:
+#     zf = zipfile.ZipFile(f'C://Users//justi//Python Projects//PPP//PPP-Analysis//PPP Data//All Data 1201//{i}')
+#     file_list = zf.namelist()
+#     file_list = [k for k in file_list if '.csv' in k]
+#     file_list = [k for k in file_list if '_MACOSX' not in k]
+#     for j in file_list:
+#         df = pd.read_csv(zf.open(f'{j}'))
+#         dff = dff.append(df)
 
 
-# #using the sample dataset
-# dff = pd.read_csv('sample.csv')
-# dff=dff
+#using the sample dataset
+dff = pd.read_csv('sample.csv')
+dff=dff
 
 zips = dff['Zip'].dropna().unique()
 
@@ -42,7 +45,8 @@ app.layout = html.Div(children=[
         columns = [
             {'name': i, 'id': i} for i in dff.columns],
         data=dff.to_dict('records')
-    )
+    ),
+    html.Img(src='data:image/png;base64,{}'.format(encode_image))
 ])
 
 @app.callback(
