@@ -37,6 +37,6 @@ As I noted before, the jobs numbers will not be accurate as there was a sizable 
 
 ### Industries 
 Pretty self explanitory. Restraunts coming in first makes sense but Offices of Lawyers recieved the third largest amount of money? 
-
+![](Images/Industries.png)
 
 ### Demographics 
