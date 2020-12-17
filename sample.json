@@ -1,0 +1,79 @@
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "6116",
+               "short_name" : "6116",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Rolling Road",
+               "short_name" : "Rolling Rd",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "West Springfield",
+               "short_name" : "West Springfield",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Springfield",
+               "short_name" : "Springfield",
+               "types" : [ "administrative_area_level_3", "political" ]
+            },
+            {
+               "long_name" : "Fairfax County",
+               "short_name" : "Fairfax County",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Virginia",
+               "short_name" : "VA",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "22152",
+               "short_name" : "22152",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "6116 Rolling Rd, West Springfield, VA 22152, USA",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 38.7846154,
+                  "lng" : -77.23799369999999
+               },
+               "southwest" : {
+                  "lat" : 38.78418449999999,
+                  "lng" : -77.2384794
+               }
+            },
+            "location" : {
+               "lat" : 38.784353,
+               "lng" : -77.23833739999999
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 38.7857489302915,
+                  "lng" : -77.23688756970849
+               },
+               "southwest" : {
+                  "lat" : 38.7830509697085,
+                  "lng" : -77.23958553029149
+               }
+            }
+         },
+         "place_id" : "ChIJT_83LoBStokRJh1ZFKM0RG0",
+         "types" : [ "premise" ]
+      }
+   ],
+   "status" : "OK"
+}
